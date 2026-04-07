@@ -1,0 +1,5 @@
+node_modules/
+.env
+*.log
+.DS_Store
+springboot/src/main/resources/application.properties
