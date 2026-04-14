@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0a0f1e;
+  min-height: 100vh;
+}
+
+.login-input::placeholder, .dark-input::placeholder { color: rgba(255,255,255,0.5); }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global card style - glassmorphism dark */
+.cf-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  padding: 24px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.cf-btn-primary {
+  background: linear-gradient(135deg, #00bcd4, #006064);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+.cf-btn-danger {
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cf-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cf-input::placeholder { color: rgba(255,255,255,0.4); }
+
+.cf-input:focus {
+  border-color: #00bcd4;
+  background: rgba(255,255,255,0.12);
+}
+
+.cf-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+  letter-spacing: 0.2px;
+}
+
+.cf-subheading {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin: 0 0 24px;
+}
+
+/* Bootstrap overrides for dark theme */
+.text-muted { color: rgba(255,255,255,0.5) !important; }
+.card { background: rgba(255,255,255,0.07) !important; color: #fff !important; border-color: rgba(255,255,255,0.12) !important; }
+.card-body { color: #fff !important; }
+.fw-bold { color: #fff !important; }
+.fs-3 { color: #fff !important; }
+.table { color: #fff !important; }
+.table th, .table td { color: #fff !important; border-color: rgba(255,255,255,0.1) !important; }
+.table thead th { color: rgba(255,255,255,0.6) !important; }
+.form-control, .form-select { background: rgba(255,255,255,0.08) !important; color: #fff !important; border-color: rgba(255,255,255,0.15) !important; }
+.form-control::placeholder { color: rgba(255,255,255,0.4) !important; }
+.modal-content { background: #0d1b3e !important; color: #fff !important; }
+.modal-header, .modal-footer { border-color: rgba(255,255,255,0.1) !important; }
+
+* { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { color: #fff !important; }
+p { color: rgba(255,255,255,0.8) !important; }
+label { color: rgba(255,255,255,0.8) !important; }
+span:not(.badge) { color: inherit; }
+
+table { color: #fff; width: 100%; }
+th { color: rgba(255,255,255,0.6) !important; border-bottom-color: rgba(255,255,255,0.15) !important; }
+td { color: #fff !important; border-bottom-color: rgba(255,255,255,0.08) !important; }
+tr { color: #fff; }
+
+/* Inputs and selects */
+input, select, textarea {
+  color: #fff !important;
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  border-radius: 6px;
+  color-scheme: dark;
+}
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.4) !important; }
+select option { background: #0a0f1e; color: #fff; }
+input:disabled { opacity: 0.5; }
+
+/* Strong and bold */
+strong { color: #fff !important; }
+
+/* Links */
+a { color: #00bcd4; }
