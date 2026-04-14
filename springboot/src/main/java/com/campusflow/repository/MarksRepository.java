@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface MarksRepository extends JpaRepository<Marks, Long> {
     List<Marks> findByStudent_RegisterNumber(String registerNumber);
+    List<Marks> findByStudent_RegisterNumberAndSubject_Id(String registerNumber, Long subjectId);
     List<Marks> findBySubject_Id(Long subjectId);
     List<Marks> findBySubject_IdAndExamType_Id(Long subjectId, Integer examTypeId);
     Optional<Marks> findByStudent_RegisterNumberAndSubject_IdAndExamType_Id(String regNum, Long subjectId, Integer examTypeId);

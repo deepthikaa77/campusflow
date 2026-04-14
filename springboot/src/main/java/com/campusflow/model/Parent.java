@@ -26,12 +26,6 @@ public class Parent {
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt = LocalDateTime.now();
-
-    @PreUpdate
-    public void preUpdate() { this.updatedAt = LocalDateTime.now(); }
-
     public enum Relationship { FATHER, MOTHER, GUARDIAN }
 
     public Long getId() { return id; }
@@ -42,5 +36,4 @@ public class Parent {
     public Relationship getRelationship() { return relationship; }
     public void setRelationship(Relationship relationship) { this.relationship = relationship; }
     public LocalDateTime getCreatedAt() { return createdAt; }
-    public LocalDateTime getUpdatedAt() { return updatedAt; }
 }

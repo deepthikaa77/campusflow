@@ -19,6 +19,13 @@ public class AttendanceController {
 
     public AttendanceController(AttendanceService attendanceService) { this.attendanceService = attendanceService; }
 
+    @GetMapping("/subject/{subjectId}/marksheet")
+    @PreAuthorize("hasAnyRole('STAFF','TUTOR')")
+    public ResponseEntity<?> getMarkSheet(@PathVariable Long subjectId,
+                                          @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        return ResponseEntity.ok(attendanceService.getMarkSheet(subjectId, date));
+    }
+
     @PostMapping("/mark")
     @PreAuthorize("hasAnyRole('STAFF','TUTOR')")
     public ResponseEntity<?> mark(@RequestBody AttendanceRequest req, @AuthenticationPrincipal User user) {

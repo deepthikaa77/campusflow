@@ -71,6 +71,16 @@ public class AuthService {
             staff.setUser(user);
             staffRepository.save(staff);
         }
+        if (role == User.Role.PARENT) {
+            Student student = studentRepository.findById(req.getStudentId())
+                .orElseThrow(() -> new RuntimeException("Student not found with register number: " + req.getStudentId()));
+            Parent parent = new Parent();
+            parent.setUser(user);
+            parent.setStudent(student);
+            if (req.getRelationship() != null)
+                parent.setRelationship(Parent.Relationship.valueOf(req.getRelationship()));
+            parentRepository.save(parent);
+        }
         return Map.of("message", "User registered successfully", "userId", user.getId());
     }
 

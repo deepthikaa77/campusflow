@@ -3,3 +3,11 @@ node_modules/
 *.log
 .DS_Store
 springboot/src/main/resources/application.properties
+
+# Maven build output
+springboot/target/
+*.class
+
+# Archives and OS files
+frontend.zip
+Thumbs.db

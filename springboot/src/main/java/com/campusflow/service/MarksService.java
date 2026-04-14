@@ -75,8 +75,12 @@ public class MarksService {
         map.put("studentId", m.getStudent().getRegisterNumber());
         map.put("studentName", m.getStudent().getName());
         map.put("subjectId", m.getSubject().getId());
+        map.put("course_name", m.getSubject().getCourse().getCourseName());
+        map.put("course_code", m.getSubject().getCourse().getCourseCode());
         map.put("examTypeId", m.getExamType().getId());
-        map.put("examTypeName", m.getExamType().getName());
+        map.put("exam_name", m.getExamType().getName());
+        map.put("marks_obtained", m.getMarksObtained());
+        map.put("exam_max_marks", m.getMaxMarks());
         map.put("marksObtained", m.getMarksObtained());
         map.put("maxMarks", m.getMaxMarks());
         map.put("createdAt", m.getCreatedAt());
